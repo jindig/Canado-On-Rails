@@ -2,11 +2,15 @@
 <p> These are all the things I need to do today.</p>
 
 
-<ul class="todo_items">
+<table class="todo_items">
 	<% @todo_list.todo_items.each do |todo_item| %>
-	<li><%= todo_item.content %></li>
+	<tr id="<%= dom_id(todo_item) %>">
+	<%= todo_item.content %>
+	<%= link_to "Edit", edit_todo_list_todo_item_path(todo_item)%>
+	<%= link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete %>
+	</tr>
 	<% end %>
-</ul>
+</table>
 
 <p>
 <%= link_to "New Todo Item", new_todo_list_todo_item_path %>

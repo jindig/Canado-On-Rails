@@ -1,8 +1,4 @@
+<h1><%= @todo_list.title %> - Add List Item</h1>
 <%= form_for [@todo_list, @todo_item] do |form| %>
-	<%= form.label :content %>
-	<%= form.text_field :content %>
-	
-
-
-	<%= form.submit "Save" %>
+  <%= render partial: form %>	
 	<% end %>
