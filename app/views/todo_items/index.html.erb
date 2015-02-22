@@ -5,7 +5,7 @@
 <table class="todo_items">
 	<thead>
 		<tr>
-			<th width:"25%">Completed></th>
+			<th width:"25%">Done or Doing?></th>
 			<th width:"65%">Task></th>
 			<th width:"10%">Functions></th>
 
@@ -18,7 +18,7 @@
 	<td><%= todo_item.content %></td>
 	<td> 
 	<%= if todo_item.completed_at.blank? %>
-	<%= "Mark Task Complete", complete_todo_list_todo_item_path(todo_item), method: :patch%>
+	<%= "Mark Task Done", complete_todo_list_todo_item_path(todo_item), method: :patch%>
 	<% end %>
 	<%= link_to "Edit", edit_todo_list_todo_item_path(todo_item)%>
 	<%= link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete %>
