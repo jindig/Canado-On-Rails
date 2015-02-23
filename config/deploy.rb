@@ -41,6 +41,7 @@ task :environment do
   # Commented out above lines to switch to using RVM instead of RBENV
 
   # For those using RVM, use this to load an RVM version@gemset.
+  queue 'source ~/.bash_profile'
   invoke :'rvm:use[ruby-1.9.3-p125@default]'
 end
 
