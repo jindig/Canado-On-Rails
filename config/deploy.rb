@@ -16,6 +16,8 @@ set :repository, 'git@github.com:deploy/Canado-On-Rails.git'
 set :branch, 'master'
 set :user, 'deploy'
 
+set_default :rvm_path, "$HOME/.rvm/scripts/rvm"
+
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
 
