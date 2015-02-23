@@ -1,0 +1,11 @@
+server {
+
+	listen 80 default_server;
+	server_name www.musicmoneymaster.com;
+	passenger_enabled on;
+	#passenger_app_env development;
+	root /testapp
+
+
+
+}

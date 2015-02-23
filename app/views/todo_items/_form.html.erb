@@ -1,0 +1,16 @@
+  <div>
+
+      <ul>
+      <% @todo_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  </div>
+ 
+
+	<%= form.label :content %>
+	<%= form.text_field :content %>
+	
+
+
+	<%= form.submit "Save" %>
