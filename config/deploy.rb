@@ -1,8 +1,8 @@
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
-require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
-# require 'mina/rvm'    # for rvm support. (http://rvm.io)
+#require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
+require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -33,11 +33,13 @@ set :shared_paths, ['config/database.yml', 'log']
 task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  invoke :'rbenv:load'
-  set_default :rbenv_path, "/Users/joshindig/.rbenv/bin/rbenv"
+  #invoke :'rbenv:load'
+  #set_default :rbenv_path, "/Users/joshindig/.rbenv/bin/rbenv"
+  
+  # Commented out above lines to switch to using RVM instead of RBENV
 
   # For those using RVM, use this to load an RVM version@gemset.
-  # invoke :'rvm:use[ruby-1.9.3-p125@default]'
+  invoke :'rvm:use[ruby-1.9.3-p125@default]'
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
