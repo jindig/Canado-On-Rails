@@ -28,12 +28,13 @@ set :shared_paths, ['config/database.yml', 'log']
 #   set :port, '30000'     # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
-# This task is the environment that is loaded for most commands, such as
+# This task is the environment that is loadeqd for most commands, such as
 # `mina deploy` or `mina rake`.
 task :environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
   invoke :'rbenv:load'
+  set_default :rbenv_path, "/Users/joshindig/.rbenv/bin/rbenv"
 
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use[ruby-1.9.3-p125@default]'
